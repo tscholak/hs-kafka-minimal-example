@@ -1,0 +1,6 @@
+.DS_STORE
+result*
+**/dist
+**/hie.log
+**/hie.err
+.cache

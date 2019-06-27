@@ -1,0 +1,40 @@
+name:           hs-kafka-minimal-example
+version:        0.0.1
+synopsis:       Minimal Example for https://github.com/haskell-works/hw-kafka-client/issues/102
+description:    Please see README.md
+category:       Web
+homepage:       https://github.com/tscholak/hs-kafka-minimal-example#readme
+bug-reports:    https://github.com/tscholak/hs-kafka-minimal-example/issues
+maintainer:     Torsten Scholak <torsten.scholak@googlemail.com>
+license:        Apache
+build-type:     Simple
+cabal-version:  >= 1.10
+tested-with:    GHC == 8.6.5
+
+source-repository head
+  type: git
+  location: https://github.com/tscholak/hs-kafka-minimal-example
+
+executable hs-kafka-minimal-example
+  main-is:
+      Main.hs
+  other-modules:
+      Paths_hs_kafka_minimal_example
+  hs-source-dirs:
+      cmd
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      RecordWildCards
+      RankNTypes
+      ScopedTypeVariables
+      LambdaCase
+      QuantifiedConstraints
+  ghc-options:
+      -Wall -Werror -threaded
+  build-depends:
+      base >=4.11 && <5
+    , hw-kafka-client
+    , protolude
+  default-language:
+      Haskell2010
